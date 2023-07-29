@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@100;300;400;700&display=swap");
+:root {
+    --bg--color: #0B2434;
+    --die--color: #59E391;
+    --tnzs--color: #F5F5F5;
+    --btn-color: #5035FF;
+    --wite: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg--color);
+}
+
+main {
+    max-width: 1270px;
+    width: 670px;
+    height: 450px;
+    background-color: var(--tnzs--color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.title {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: calc(1.2em + 2.3vw);
+    margin-bottom: -2rem;
+}
+
+.instructions {
+    width: 50%;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: calc(0.47em + 0.45vw);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
+}
+
+.die--face {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--wite);
+    border-radius: 3.8127px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.column {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+.dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+section > p {
+    position: relative;
+    bottom: 1.5rem;
+}
+
+.roll--reset {
+    background: var(--btn-color);
+    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+    border-radius: 3.81277px;
+    border: none;
+    color: var(--wite);
+    font-size: calc(0.99em + 0.57vw);
+    font-family: "karla", sans-serif;
+    padding: 0.8rem 2.5rem;
+    cursor: pointer;
+}
+
+.roll--reset:focus {
+    outline: none;
+}
+
+.roll--reset:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
